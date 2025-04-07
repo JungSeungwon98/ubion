@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Main Page</h1>
+    <p>
+        <!-- 로그인을 한 유저의 이름을 보여주고 안녕하세요!를 추가 -->
+        {{name}}님 안녕하세요!
+    </p>
+
+    <button onclick="location.href='/graph'">페이지 이동</button>
+
+
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+    <script>
+            const ctx = document.getElementById('myChart');
+        
+            new Chart(ctx, {
+            type: 'bar',
+            data: {
+                    // labels : x축 데이터
+            labels: {{x_data | tojson}},
+            datasets: [{
+                label: '# of Votes',
+                // y축 데이터
+                data: {{y_data | tojson}},
+                borderWidth: 1
+                }]
+            }
+        });
+        
+      </script>
+      
+
+
+    <!-- <p>{{columns}}</p>
+    <p>{{td_data}}</p> -->
+    <!-- 기본적인 table 태그 생성 -->
+     <table border="1">
+        <tr>
+            <!-- columns의 개수만큼 반복 실행 th 태그를 생성 -->
+             {% for col in columns %}
+            <th>{{col}}</th>
+            {% endfor %}
+        </tr>
+        <!-- for문 시작 -->
+         <!-- td_data : [ {
+                                'col1' : 'value1',
+                                'col2' : 'value2',
+                                ...
+                                'col13' : 'value13'
+                            }
+                            ]-->
+        {% for row_data in td_data %}
+        <tr>
+            <!-- 다중 반복문 사용 -->
+             {% for col in columns %}
+                <!-- 열을 생성 -->
+                 <td> {{ row_data[col] }} </td>
+            {% endfor %}            
+        </tr>
+        <!-- for문 종료 -->
+        {% endfor %}
+     </table>
+</body>
+</html>
