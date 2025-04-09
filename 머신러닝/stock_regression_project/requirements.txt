@@ -1,0 +1,16 @@
+pandas
+numpy
+scikit-learn
+yfinance
+streamlit
+plotly
+joblib
+python-dateutil
+dash
+dash-bootstrap-components
+python-dotenv
+requests
+reportlab
+kaleido
+seaborn
+matplotlib
