@@ -1,0 +1,99 @@
+# Python 바이트 코드 파일
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# 가상 환경
+.env
+.venv
+env/
+venv/
+ENV/
+.virtualenv/
+
+# 배포 패키지
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 테스트 및 커버리지 파일
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# 데이터 파일 (필요시 주석 해제)
+# *.csv
+# *.json
+# *.xlsx
+
+# 대시보드 관련 폴더 및 파일
+dashboard/
+*.html
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+
+# 모델 파일
+*.joblib
+*.pickle
+*.pkl
+*.h5
+*.keras
+*.model
+*.pt
+*.pth
+
+# 로그 파일
+*.log
+logs/
+
+# OS 관련 파일
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE 관련 파일
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# 임시 파일
+tmp/
+temp/ 
